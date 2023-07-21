@@ -1,0 +1,111 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #191C29;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    font-family: 'Jolly Lodger', cursive;
+    >h3{
+        width: 100%;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+.box{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    >div{
+        width: 200px;
+        height: 280px;
+        position: relative;
+        transition: .4s;
+        transform-style: preserve-3d;
+        
+        &:hover .cover{
+            transform:perspective(800px) rotateX(30deg);
+            box-shadow: 10px 40px 40px  black ;  
+          }
+        &:hover .character{
+            height: 100%;
+            transform: perspective(800px) translateZ(70px) translateY(-70px);
+        }
+        &:hover .cover>figure>div{
+            z-index: 13;
+            bottom: 15px;
+            transform:perspective(800px) translateZ(50px);
+        }
+        >.cover{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform-style: preserve-3d;
+            z-index: 1;
+            transition: .4s;
+            >figure{
+                width: 200px;
+                height: 280px;
+                position: relative;
+                transform-style: preserve-3d;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                >div{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                    transition: .4s;
+                    transform:perspective(800px) translateZ(0px);
+                    // border: 1px solid red;
+                    >h3{
+                        width: 100%;
+                        text-align: center;
+                        color: #BF9945;
+                        font-size: 25px;
+                        
+                    }
+                    >h2{
+                        text-align: center;
+                        color: #BF9945;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        >.character{
+            width: 100%;
+            height: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform-style: preserve-3d;
+            overflow: hidden;
+            transition: .4s;
+          
+            >figure{
+                width: 200px;
+                height: 280px;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
