@@ -2,13 +2,13 @@
 
 ![view (1)](https://github.com/hossein-deyri/3DCardHover-Trick/assets/136192436/9252c2fa-660f-4ff1-8843-fa52924756db)
 
-- [Demo Project](https://hossein-deyri.github.io/First-Project/)
+- [Demo Project]( https://hossein-deyri.github.io/3DCardHover-Trick/)
 
 - Developed By Hossein Deyri
 
 - Created - 2023-07-21
 
-- Technologies Used - Html5 , css2 
+- Technologies Used - Html5, Css3, Sass
 
 - Role - Frontend
 
